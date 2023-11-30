@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Security Customization</title>
+</head>
+<body>
+    <h1 th:inline="text">Welcome [[${user}]], Spring Security Authentication Success</h1>
+    <a th:href="@{/perform_logout}">logout</a>
+</body>
+</html>
