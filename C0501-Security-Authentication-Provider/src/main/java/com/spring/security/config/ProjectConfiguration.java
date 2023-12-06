@@ -23,15 +23,15 @@ public class ProjectConfiguration {
     private final DataSource dataSource;
 
     @Bean
-    public UserDetailsService customInMemoryUserDetailsService(){
+    public UserDetailsService customInMemoryUserDetailsService() {
         UserDetails u1 = new User("longtq1", "abc123", "admin");
         UserDetails u2 = new User("longtq2", "abc123", "user");
-        List<UserDetails> users = List.of(u1,u2);
+        List<UserDetails> users = List.of(u1, u2);
         return new CustomInMemoryUserDetailsService(users);
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }
 

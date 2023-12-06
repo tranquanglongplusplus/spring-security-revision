@@ -15,9 +15,9 @@ import java.util.concurrent.Executors;
 public class TestService {
 
     @Async
-    public void testNewThread(){
+    public void testNewThread() {
         SecurityContext context = SecurityContextHolder.getContext();
-        if (context.getAuthentication() != null){
+        if (context.getAuthentication() != null) {
             System.out.println(context.getAuthentication().getName());
         } else {
             System.out.println("null object");
@@ -25,7 +25,7 @@ public class TestService {
     }
 
     @Async
-    public void testDelegateSecurityContext(){
+    public void testDelegateSecurityContext() {
         Callable<String> task = () -> {
             SecurityContext context = SecurityContextHolder.getContext();
             return context.getAuthentication().getName();
