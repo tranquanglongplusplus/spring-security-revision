@@ -25,13 +25,13 @@ public class SecurityContextController {
     private final TestService testService;
 
     @GetMapping("/user")
-    public String getUserPage(){
+    public String getUserPage() {
         SecurityContext context = SecurityContextHolder.getContext();
         return context.getAuthentication().getName();
     }
 
     @GetMapping("/test")
-    public String getTest(){
+    public String getTest() {
         testService.testNewThread();
         testService.testDelegateSecurityContext();
         return "Test run";

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @GetMapping("/home")
-    public String getHome(Authentication authentication, Model model){
+    public String getHome(Authentication authentication, Model model) {
         model.addAttribute("user", authentication.getName());
         return "home";
     }
