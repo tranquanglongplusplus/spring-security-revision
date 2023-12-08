@@ -1,0 +1,60 @@
+###
+
+# curl -XPOST http://localhost:8080/a
+POST http://localhost:8080/a
+
+###
+
+# curl -XGET http://localhost:8080/a
+GET http://localhost:8080/a
+
+###
+
+# curl -u john:12345 -XGET http://localhost:8080/a
+GET http://localhost:8080/a
+Authorization: Basic john 12345
+
+###
+
+# curl -u john:12345 -XGET http://localhost:8080/a/b
+GET http://localhost:8080/a/b
+Authorization: Basic john 12345
+
+###
+
+####################################################################
+
+#### request for mvc matcher with path expression ###################################
+
+# curl http://localhost:8080/a
+GET http://localhost:8080/a
+
+###
+
+# curl http://localhost:8080/a/b
+GET http://localhost:8080/a/b
+
+###
+
+# curl http://localhost:8080/a/b/c
+GET http://localhost:8080/a/b/c
+
+###
+
+####################################################################
+
+#### request for using pathVariable ###################################
+
+# curl http://localhost:8080/product/1234a
+GET http://localhost:8080/product/1234a
+
+###
+
+# curl http://localhost:8080/product/1234
+GET http://localhost:8080/product/1234
+
+###
+
+
+
+
